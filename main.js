@@ -2,6 +2,7 @@
 // #ifndef VUE3
 import Vue from 'vue'
 import App from './App'
+
 // 导入网络请求的包
 import { $http } from '@escook/request-miniprogram'
 

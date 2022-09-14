@@ -8,7 +8,7 @@ import { $http } from '@escook/request-miniprogram'
 
 uni.$http = $http
 // 配置请求根路径
-$http.baseUrl = 'https://api-ugo-web.itheima.net'
+$http.baseUrl = 'https://api-hmugo-web.itheima.net'
 
 // 请求拦截器
 $http.beforeRequest = function(options) {

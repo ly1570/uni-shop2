@@ -1,6 +1,8 @@
 <template>
-      <!-- 右侧滑动区域 -->
   <view>
+    <!-- 使用自定义的搜索组件 -->
+    <!-- <my-search :bgcolor="'pink'" :radius="10"></my-search> -->
+    <my-search @click="gotoSearch"></my-search>
     <view class="scroll-view-container">
       <!-- 左侧滑动区域 -->
       <scroll-view class="left-scroll-view" scroll-y :style="{height: wh + 'px' }">
@@ -9,6 +11,7 @@
             @click="activeChanged(i)">{{item.cat_name}}</view>
         </block>
       </scroll-view>
+      <!-- 右侧滑动区域 -->
       <scroll-view class="right-scroll-view" scroll-y :style="{height: wh + 'px' }" 
         :scroll-top="scrollTop">
         <view class="cate-lv2" v-for="(item2, i2) in cateList2" :key="i2">
@@ -65,6 +68,12 @@
         uni.navigateTo({
           url: '/subpkg/goods_list/goods_list?cid=' + item3.cat_id
         })
+      },
+      gotoSearch() {
+        // console.log('ok');
+        uni.navigateTo({
+          url: '/subpkg/search/search'
+        })
       }
     },
     onLoad() {
@@ -72,7 +81,7 @@
       // 获取当前系统信息
       const sysInfo = uni.getSystemInfoSync()
       console.log(sysInfo);
-      this.wh = sysInfo.windowHeight
+      this.wh = sysInfo.windowHeight - 50
     }
   }
 </script>

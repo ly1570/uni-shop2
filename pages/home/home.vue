@@ -34,7 +34,7 @@
             <image :src="item.product_list[0].image_src" mode="widthFix"
               :style="{width: item.product_list[0].image_width + 'rpx'}" ></image>
           </navigator>
-          <!-- 右侧小图片的盒子 -->
+          <!-- 右侧小图片的盒子 --> 
           <view class="right_img_box">
             <navigator 
               class="right_img_item" v-for="(item2, i2) in item.product_list" 

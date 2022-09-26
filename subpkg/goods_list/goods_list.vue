@@ -4,7 +4,6 @@
       <view v-for="(item, i) in goodsList" :key="i" @click="gotoDetail(item)">
         <!-- 为 my-goods 组件动态绑定 goods 属性的值 -->
         <my-goods :goods="item"></my-goods>
-        
       </view>
     </view>
   </view>
